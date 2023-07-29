@@ -1,0 +1,335 @@
+[
+  {
+    
+    "image": "https://www.startech.com.bd/image/cache/catalog/processor/AMD/ryzen-3-4100/amd-ryzen-3-4100-01-228x228.jpg",
+    "productName": "AMD Ryzen 3 4100 Processor",
+    "category": "Processor",
+    "status": "In Stock",
+    "price": "10,300৳",
+    "description": "AMD Ryzen 3 4100 Processor has 4 processor cores, 8 threads, and an astonishingly efficient 45-65W TDP. ",
+    "keyFeatures": {
+      "brand": "amd",
+      "model": "Ryzen 3 4100 Processor",
+      "specification": "  3.8GHz; Up to 4.0GHz",
+      "port": "Port",
+      "type": "4 Cores & 8 Threads",
+      "resolution": "Resolution",
+      "voltage": "65W"
+    },
+    "individualRating": "5",
+    "averageRating": "4.6",
+    "reviews": [
+      {
+        "username": "User1",
+        "rating": "4",
+        "comment": "This product is great!"
+      },
+      {
+        "username": "User2",
+        "rating": "5",
+        "comment": "Highly recommended!"
+      },
+      {
+        "username": "User3",
+        "rating": "3",
+        "comment": "It's okay, but could be better."
+      }
+    ]
+  },
+  {
+    
+    "image": "https://www.startech.com.bd/image/cache/catalog/processor/Intel/i5-10400/i5-10400-1-500x500.jpg",
+    "productName": "Intel 10th Gen Core i5-10400F Processor",
+    "category": "Processor",
+    "status": "In Stock",
+    "price": "12,500৳",
+    "description": "This i5-10400F Processor is the new 10th gen Comet Lake microarchitecture that is manufactured with the 14nm process that comes with six cores but lacks in HyperThreading",
+    "keyFeatures": {
+      "brand": "Intel",
+      "model": "10th Gen Core i5-10400F ",
+      "specification": "2.90 GHz up to 4.30 GHz",
+      "port": "Port",
+      "type": " DDR4-2666",
+      "resolution": "Resolution",
+      "voltage": "65W"
+    },
+    "individualRating": "4",
+    "averageRating": "4.4",
+    "reviews": [
+      {
+        "username": "User1",
+        "rating": "4",
+        "comment": "This product is great!"
+      },
+      {
+        "username": "User2",
+        "rating": "5",
+        "comment": "Highly recommended!"
+      },
+      {
+        "username": "User3",
+        "rating": "3",
+        "comment": "It's okay, but could be better."
+      }
+    ]
+  },
+  {
+    
+    "image": "https://www.startech.com.bd/image/cache/catalog/processor/Intel/core-i5-13600k/Core%20i5%2013600K-01-228x228.webp",
+    "productName": "Intel 13th Gen Core i5 13600K Raptor Lake Processor",
+    "category": "Processor",
+    "status": "In Stock",
+    "price": "36,000৳",
+    "description": "The Intel Core i5-13600K 3.5 GHz 14-Core LGA 1700 Processor will boost your productivity, gaming, and content production. This 13th-generation desktop CPU expands on the Hybrid Core design and Intel 7 process by packing 14 cores onto a single chip, four more than the prior generation, while still fitting the LGA 1700 socket. ",
+    "keyFeatures": {
+      "brand": "Intel",
+      "model": "Core i5 13600K",
+      "specification": " 3.50 GHz up to 5.10 GHz",
+      "port": "Port",
+      "type": "Up to DDR5 5600 MT/s",
+      "resolution": "Resolution",
+      "voltage": "125W"
+    },
+    "individualRating": "4",
+    "averageRating": "4.4",
+    "reviews": [
+      {
+        "username": "User1",
+        "rating": "4",
+        "comment": "This product is great!"
+      },
+      {
+        "username": "User2",
+        "rating": "5",
+        "comment": "Highly recommended!"
+      },
+      {
+        "username": "User3",
+        "rating": "3",
+        "comment": "It's okay, but could be better."
+      }
+    ]
+  },
+  {
+    
+    "image": "https://www.startech.com.bd/image/cache/catalog/processor/amd/5600x/5600x-001-500x500.jpg",
+    "productName": "AMD Ryzen 5 5600 Processor",
+    "category": "Processor",
+    "status": "In Stock",
+    "price": "14,300৳",
+    "description": "AMD Ryzen 5 5600 Processor has 6 processor cores, 12 threads, and an astonishingly efficient 45-65W TDP. This processor stands with 3.5GHz Base Clock, 4.4GHz Max Boost Clock, 3MB L2 Cache, 32 MB L3 Cache with AM4 Package, and TSMC 7nm FinFET CMOS.",
+    "keyFeatures": {
+      "brand": "amd",
+      "model": "Ryzen 5 5600",
+      "specification": "3.5GHz up to 4.4GHz",
+      "port": "Port",
+      "type": "AMD ZEN 3 Architecture",
+      "resolution": "Resolution",
+      "voltage": "65W"
+    },
+    "individualRating": "4",
+    "averageRating": "4.4",
+    "reviews": [
+      {
+        "username": "User1",
+        "rating": "4",
+        "comment": "This product is great!"
+      },
+      {
+        "username": "User2",
+        "rating": "5",
+        "comment": "Highly recommended!"
+      },
+      {
+        "username": "User3",
+        "rating": "3",
+        "comment": "It's okay, but could be better."
+      }
+    ]
+  },
+  {
+    
+    "image": "https://www.startech.com.bd/image/cache/catalog/Motherboard/Gigabyte/GIGABYTE%20GA-J1800M-D3P/GIGABYTE%20GA-J1800M-D3P-1-228x228.jpg",
+    "productName": "Gigabyte B560 AORUS ELITE Motherboard",
+    "category": "Motherboard",
+    "status": "In Stock",
+    "price": "15,500৳",
+    "description": "Gigabyte B560 AORUS ELITE Motherboard supports 10th and 11th Gen Intel Core Processors. It features dual M.2 slots, USB 3.2 Gen2 ports, and robust power design to deliver stable performance for gaming and productivity.",
+    "keyFeatures": {
+      "brand": "Gigabyte",
+      "model": "B560 AORUS ELITE",
+      "specification": "Supports 10th and 11th Gen Intel Core Processors",
+      "port": "Dual M.2 slots, USB 3.2 Gen2",
+      "type": "ATX Form Factor",
+      "resolution": "Resolution",
+      "voltage": "N/A"
+    },
+    "individualRating": "4.5",
+    "averageRating": "4.3",
+    "reviews": [
+      {
+        "username": "User1",
+        "rating": "5",
+        "comment": "Excellent motherboard for the price!"
+      },
+      {
+        "username": "User2",
+        "rating": "4",
+        "comment": "Good features and build quality."
+      },
+      {
+        "username": "User3",
+        "rating": "4.5",
+        "comment": "Easy to install and works flawlessly."
+      }
+    ]
+  },
+  {
+    
+    "image": "https://www.startech.com.bd/image/cache/catalog/ram/apacer/panther-golden-4gb-ddr4-2666mhz/panther-golden-4gb-ddr4-2666mhz-01-228x228.jpg",
+    "productName": "Corsair Vengeance RGB Pro 16GB DDR4 RAM",
+    "category": "RAM",
+    "status": "In Stock",
+    "price": "8,200৳",
+    "description": "Corsair Vengeance RGB Pro is a 16GB DDR4 RAM kit designed for high-performance overclocking. It features mesmerizing RGB lighting and aluminum heatspreaders for efficient heat dissipation.",
+    "keyFeatures": {
+      "brand": "Corsair",
+      "model": "Vengeance RGB Pro",
+      "specification": "16GB DDR4 RAM",
+      "port": "DIMM",
+      "type": "288-Pin",
+      "resolution": "Resolution",
+      "voltage": "1.35V"
+    },
+    "individualRating": "4.7",
+    "averageRating": "4.8",
+    "reviews": [
+      {
+        "username": "User1",
+        "rating": "5",
+        "comment": "Fast and visually stunning RAM!"
+      },
+      {
+        "username": "User2",
+        "rating": "5",
+        "comment": "Easy to configure RGB lighting."
+      },
+      {
+        "username": "User3",
+        "rating": "4.5",
+        "comment": "Works great with my gaming setup."
+      }
+    ]
+  },
+  {
+    
+    "image": "https://www.startech.com.bd/image/cache/catalog/power-supply/gamdias/aura-gp550/aura-gp550-01-228x228.webp",
+    "productName": "Corsair TX550M 550W 80 Plus Gold PSU",
+    "category": "Power Supply Unit",
+    "status": "In Stock",
+    "price": "6,800৳",
+    "description": "The Corsair TX550M is a 550W power supply unit with 80 Plus Gold efficiency, providing stable power for your PC components. It features a semi-modular design for easy cable management.",
+    "keyFeatures": {
+      "brand": "Corsair",
+      "model": "TX550M",
+      "specification": "550W 80 Plus Gold",
+      "port": "Modular",
+      "type": "ATX",
+      "resolution": "Resolution",
+      "voltage": "100-240V"
+    },
+    "individualRating": "4.8",
+    "averageRating": "4.6",
+    "reviews": [
+      {
+        "username": "User1",
+        "rating": "5",
+        "comment": "Reliable and efficient PSU!"
+      },
+      {
+        "username": "User2",
+        "rating": "4",
+        "comment": "Semi-modular design is helpful."
+      },
+      {
+        "username": "User3",
+        "rating": "5",
+        "comment": "Quiet operation and good performance."
+      }
+    ]
+  },
+  {
+    
+    "image": "https://www.startech.com.bd/image/cache/catalog/HDD/Western%20Digital/WD%20INT%20Blue%201TB-228x228.jpg",
+    "productName": "WD Blue 2TB SATA Internal Hard Drive",
+    "category": "Storage Device",
+    "status": "In Stock",
+    "price": "5,500৳",
+    "description": "The WD Blue 2TB SATA Internal Hard Drive provides reliable storage for your data-intensive tasks. It's designed for desktop PCs, All-in-One PCs, and external enclosures.",
+    "keyFeatures": {
+      "brand": "Western Digital (WD)",
+      "model": "Blue",
+      "specification": "2TB SATA Internal Hard Drive",
+      "port": "SATA 6 Gb/s",
+      "type": "3.5-inch HDD",
+      "resolution": "Resolution",
+      "voltage": "N/A"
+    },
+    "individualRating": "4.6",
+    "averageRating": "4.5",
+    "reviews": [
+      {
+        "username": "User1",
+        "rating": "4",
+        "comment": "Spacious and reliable storage!"
+      },
+      {
+        "username": "User2",
+        "rating": "5",
+        "comment": "Great value for the capacity."
+      },
+      {
+        "username": "User3",
+        "rating": "4.5",
+        "comment": "Works perfectly for my storage needs."
+      }
+    ]
+  },
+  {
+    
+    "image": "https://www.startech.com.bd/image/cache/catalog/monitor/msi/mp223/mp223-06-500x500.webp",
+    "productName": "AOC C24G1 24-inch Curved Gaming Monitor",
+    "category": "Monitor",
+    "status": "In Stock",
+    "price": "16,500৳",
+    "description": "The AOC C24G1 is a 24-inch curved gaming monitor with a 144Hz refresh rate and 1ms response time, delivering smooth visuals and responsiveness for an immersive gaming experience.",
+    "keyFeatures": {
+      "brand": "AOC",
+      "model": "C24G1",
+      "specification": "24-inch Curved Gaming Monitor",
+      "port": "HDMI, DisplayPort, VGA",
+      "type": "VA Panel",
+      "resolution": "1920 x 1080 (Full HD)",
+      "voltage": "N/A"
+    },
+    "individualRating": "4.9",
+    "averageRating": "4.7",
+    "reviews": [
+      {
+        "username": "User1",
+        "rating": "5",
+        "comment": "The curved display is fantastic!"
+      },
+      {
+        "username": "User2",
+        "rating": "5",
+        "comment": "144Hz makes a big difference in gaming."
+      },
+      {
+        "username": "User3",
+        "rating": "4.5",
+        "comment": "Color reproduction is excellent."
+      }
+    ]
+  }
+]
