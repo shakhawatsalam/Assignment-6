@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 const Singleproduct = ({ product }) => {
-    console.log(product)
+  console.log(product);
   return (
     <div>
       <div className='card w-96 glass'>
@@ -10,9 +10,12 @@ const Singleproduct = ({ product }) => {
         </figure>
         <div className='card-body'>
           <h2 className='card-title'>{product.productName}</h2>
-          <p>How to park your car at your garage?</p>
+          <h3 className='font-bold'>Category: {product.category}</h3>
+          <h3 className='font-bold'>Price: {product.price}</h3>
+          <h3 className='font-bold'>Status: {product.status}</h3>
+          <h3 className='font-bold'>Rating: {product.averageRating}</h3>
           <div className='card-actions justify-end'>
-            <button className='btn btn-primary'>Learn now!</button>
+            <button className='btn btn-primary'>Details</button>
           </div>
         </div>
       </div>
