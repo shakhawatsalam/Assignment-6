@@ -1,7 +1,7 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const Singleproduct = ({ product }) => {
-  console.log(product);
   return (
     <div>
       <div className='card w-96 glass'>
@@ -15,7 +15,11 @@ const Singleproduct = ({ product }) => {
           <h3 className='font-bold'>Status: {product.status}</h3>
           <h3 className='font-bold'>Rating: {product.averageRating}</h3>
           <div className='card-actions justify-end'>
-            <button className='btn btn-primary'>Details</button>
+            <Link
+              href={`productdetails/${product._id}`}
+              className='btn btn-primary'>
+              Details
+            </Link>
           </div>
         </div>
       </div>

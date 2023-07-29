@@ -2,26 +2,42 @@ import RootLayout from "@/components/Layout/RootLayout";
 import Image from "next/image";
 import React from "react";
 
-const productDetails = () => {
+const productDetails = ({ product }) => {
   return (
     <div>
       <div className='hero min-h-screen'>
         <div className='hero-content flex-col lg:flex-row-reverse'>
           <div className='text-center lg:text-left'>
-            <h1 className='text-5xl font-bold'>Login now!</h1>
-            <p className='py-6'>
-              Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
-              excepturi exercitationem quasi. In deleniti eaque aut repudiandae
-              et a id nisi.
-            </p>
+            <h1 className='text-5xl font-bold'>{product.productName}</h1>
+            <p className='py-6'>{product.description}</p>
+            <h3 className='font-bold text-2xl'>Category: {product.category}</h3>
+            <h3 className='font-bold text-2xl'>Price: {product.price}</h3>
+            <h3 className='font-bold text-2xl'>Status: {product.status}</h3>
+            <h3 className='font-bold text-2xl'>
+              Rating: {product.averageRating}
+            </h3>
+            <h3 className='font-bold text-2xl'>Key Features:</h3>
+            <h4 className='text-2xl'> Brand: {product.keyFeatures.brand}</h4>
+            <h4 className='text-2xl'> Model: {product.keyFeatures.brand}</h4>
+            <h4 className='text-2xl'>
+              {" "}
+              Specification: {product.keyFeatures.brand}
+            </h4>
+            <h4 className='text-2xl'> port: {product.keyFeatures.brand}</h4>
+            <h4 className='text-2xl'> Type: {product.keyFeatures.brand}</h4>
+            <h4 className='text-2xl'>
+              {" "}
+              Resolution: {product.keyFeatures.brand}
+            </h4>
+            <h4 className='text-2xl'> Voltage: {product.keyFeatures.brand}</h4>
           </div>
           <div className='card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100'>
             <div className='card-body'>
-              <div className="w-full h-full flex justify-center items-center">
+              <div className='w-full h-full flex justify-center items-center'>
                 <Image
                   width={350}
                   height={300}
-                  src='https://www.startech.com.bd/image/cache/catalog/monitor/msi/mp223/mp223-06-500x500.webp'
+                  src={product.image}
                   className='max-w-sm rounded-lg shadow-2xl'
                 />
               </div>
@@ -32,9 +48,33 @@ const productDetails = () => {
     </div>
   );
 };
+export default productDetails;
 
 productDetails.getLayout = function (page) {
   return <RootLayout>{page}</RootLayout>;
 };
 
-export default productDetails;
+export const getStaticPaths = async () => {
+  const res = await fetch(`http://localhost:5000/components`);
+  const products = await res.json();
+  const paths = products.data?.map((product) => ({
+    params: {
+      productId: product._id,
+    },
+  }));
+
+  return { paths, fallback: false }; // * true and Blocking
+};
+
+export const getStaticProps = async (context) => {
+  const { params } = context;
+  const res = await fetch(
+    `http://localhost:5000/components/${params.productId}`
+  );
+  const data = await res.json();
+  return {
+    props: {
+      product: data,
+    },
+  };
+};

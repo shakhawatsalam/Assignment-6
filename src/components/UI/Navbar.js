@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const Navbar = () => {
@@ -31,22 +32,30 @@ const Navbar = () => {
                 <a>Parent</a>
                 <ul className='p-2'>
                   <li>
-                    <a>CPU/Processor</a>
+                    <Link href={`/featuredProduct/${"Processor"}`}>
+                      CPU/Processor
+                    </Link>
                   </li>
                   <li>
-                    <a>Motherboard</a>
+                    <Link href={`/featuredProduct/${"Motherboard"}`}>
+                      Motherboard
+                    </Link>
                   </li>
                   <li>
-                    <a>RAM</a>
+                    <Link href={`/featuredProduct/${"RAM"}`}>RAM</Link>
                   </li>
                   <li>
-                    <a>Power Supply Unit</a>
+                    <Link href={`/featuredProduct/${"PowerSupply"}`}>
+                      Power Supply Unit
+                    </Link>
                   </li>
                   <li>
-                    <a>Storage Device</a>
+                    <Link href={`/featuredProduct/${"StorageDevice"}`}>
+                      Storage Device
+                    </Link>
                   </li>
                   <li>
-                    <a>Monitor</a>
+                    <Link href={`/featuredProduct/${"Monitor"}`}>Monitor</Link>
                   </li>
                 </ul>
               </li>
@@ -55,7 +64,7 @@ const Navbar = () => {
               </li>
             </ul>
           </div>
-          <a className='btn btn-ghost normal-case text-xl'>daisyUI</a>
+          <Link href={"/"} className='btn btn-ghost normal-case text-xl'>daisyUI</Link>
         </div>
         <div className='navbar-center hidden lg:flex'>
           <ul className='menu menu-horizontal px-1'>
@@ -67,22 +76,30 @@ const Navbar = () => {
                 <summary>Components</summary>
                 <ul className='p-2 z-10'>
                   <li>
-                    <a>CPU/Processor</a>
+                    <Link href={`/featuredProduct/${"Processor"}`}>
+                      CPU/Processor
+                    </Link>
                   </li>
                   <li>
-                    <a>Motherboard</a>
+                    <Link href={`/featuredProduct/${"Motherboard"}`}>
+                      Motherboard
+                    </Link>
                   </li>
                   <li>
-                    <a>RAM</a>
+                    <Link href={`/featuredProduct/${"RAM"}`}>RAM</Link>
                   </li>
                   <li>
-                    <a>Power Supply Unit</a>
+                    <Link href={`/featuredProduct/${"PowerSupply"}`}>
+                      Power Supply Unit
+                    </Link>
                   </li>
                   <li>
-                    <a>Storage Device</a>
+                    <Link href={`/featuredProduct/${"StorageDevice"}`}>
+                      Storage Device
+                    </Link>
                   </li>
                   <li>
-                    <a>Monitor</a>
+                    <Link href={`/featuredProduct/${"Monitor"}`}>Monitor</Link>
                   </li>
                 </ul>
               </details>
