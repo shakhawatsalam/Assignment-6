@@ -4,7 +4,7 @@ import React from "react";
 const Banner = () => {
   return (
     <>
-       <div className='hero h-[70vh] mb-20'>
+       <div className='hero h-96 mb-40'>
         <div className='hero-content flex-col lg:flex-row'>
           <Image width={500} height={500} src='https://www.startech.com.bd/image/cache/catalog/desktop-pc/desktop-offer/core-i7-10700-desktop-pc-01-500x500.webp' />
           <div>

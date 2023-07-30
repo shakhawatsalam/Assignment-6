@@ -28,7 +28,7 @@ addProduct.getLayout = function (page) {
 export const getServerSideProps = async (context) => {
   const { params } = context;
   const res = await fetch(
-    `http://localhost:5000/components/featured/${params.addproduct}`
+    `${process.env.BASE_URL}/components/featured/${params.addproduct}`
   );
   const data = await res.json();
   return {

@@ -10,7 +10,9 @@ const pcBuilderPage = () => {
   const { monitor, ram, motherBoard, processor, powerSupply, storageDevice } =
     useSelector((state) => state.pcBuilder.pcBuild);
   const { buildPc } = useSelector((state) => state.pcBuilder);
-  console.log(buildPc);
+  function showAlert() {
+    alert("You build Successfully");
+  }
   return (
     <div className='overflow-x-auto h-[70vh]'>
       <h1 className='text-center text-3xl'>Build Your Dream Pc</h1>
@@ -40,7 +42,7 @@ const pcBuilderPage = () => {
                       />
                     ) : (
                       <Image
-                        src='/tailwind-css-component-profile-2@56w.png'
+                        src='https://icons.iconarchive.com/icons/cornmanthe3rd/metronome/512/System-computer-icon.png'
                         alt='Avatar Tailwind CSS Component'
                         width={300}
                         height={300}
@@ -103,7 +105,7 @@ const pcBuilderPage = () => {
                       />
                     ) : (
                       <Image
-                        src='/tailwind-css-component-profile-2@56w.png'
+                        src='https://icons.iconarchive.com/icons/cornmanthe3rd/metronome/512/System-computer-icon.png'
                         alt='Avatar Tailwind CSS Component'
                         width={300}
                         height={300}
@@ -164,7 +166,7 @@ const pcBuilderPage = () => {
                       />
                     ) : (
                       <Image
-                        src='/tailwind-css-component-profile-2@56w.png'
+                        src='https://icons.iconarchive.com/icons/cornmanthe3rd/metronome/512/System-computer-icon.png'
                         alt='Avatar Tailwind CSS Component'
                         width={300}
                         height={300}
@@ -233,7 +235,7 @@ const pcBuilderPage = () => {
                       />
                     ) : (
                       <Image
-                        src='/tailwind-css-component-profile-2@56w.png'
+                        src='https://icons.iconarchive.com/icons/cornmanthe3rd/metronome/512/System-computer-icon.png'
                         alt='Avatar Tailwind CSS Component'
                         width={300}
                         height={300}
@@ -302,7 +304,7 @@ const pcBuilderPage = () => {
                       />
                     ) : (
                       <Image
-                        src='/tailwind-css-component-profile-2@56w.png'
+                        src='https://icons.iconarchive.com/icons/cornmanthe3rd/metronome/512/System-computer-icon.png'
                         alt='Avatar Tailwind CSS Component'
                         width={300}
                         height={300}
@@ -372,7 +374,7 @@ const pcBuilderPage = () => {
                       />
                     ) : (
                       <Image
-                        src='/tailwind-css-component-profile-2@56w.png'
+                        src='https://icons.iconarchive.com/icons/cornmanthe3rd/metronome/512/System-computer-icon.png'
                         alt='Avatar Tailwind CSS Component'
                         width={300}
                         height={300}
@@ -440,7 +442,9 @@ const pcBuilderPage = () => {
       </table>
       <div className='flex justify-center mt-7'>
         {buildPc ? (
-          <button className='btn btn-primary'>Build</button>
+          <button onClick={() => showAlert()} className='btn btn-primary'>
+            Build
+          </button>
         ) : (
           <button className='btn btn-primary ' disabled='disabled'>
             Build
