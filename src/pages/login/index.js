@@ -5,22 +5,22 @@ import React from "react";
 const logIn = () => {
   return (
     <div className='flex justify-center items-center h-[70vh] flex-col'>
-      <button
+      {/* <button
         onClick={() =>
           signIn("google", {
             callbackUrl:
-              "https://assignment-6-server-711i140yn-shakhawatsalam.vercel.app/",
+              "https://pc-builder-website-shakhawatsalam.vercel.app",
           })
         }
         className='btn btn-wide'>
         Sign In With Google
-      </button>
+      </button> */}
 
       <button
         onClick={() =>
           signIn("github", {
             callbackUrl:
-              "https://assignment-6-server-711i140yn-shakhawatsalam.vercel.app/",
+              "https://pc-builder-website-shakhawatsalam.vercel.app/",
           })
         }
         className='btn btn-wide mt-10'>
