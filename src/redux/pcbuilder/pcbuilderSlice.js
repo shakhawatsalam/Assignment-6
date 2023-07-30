@@ -1,8 +1,14 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  monitor: null,
-  ram: null,
+  pcBuild: {
+    monitor: null,
+    ram: null,
+    motherBoard: null,
+    processor: null,
+    powerSupply: null,
+    storageDevice: null,
+  },
 };
 
 const pcBuilderSlice = createSlice({
@@ -10,12 +16,24 @@ const pcBuilderSlice = createSlice({
   initialState,
   reducers: {
     addMonitor: (state, action) => {
-      state.monitor = action.payload;
+      if (action.payload.category === "Monitor") {
+        state.pcBuild.monitor = action.payload;
+      } else if (action.payload.category === "RAM") {
+        state.pcBuild.ram = action.payload;
+      } else if (action.payload.category === "Motherboard") {
+        state.pcBuild.motherBoard = action.payload;
+      } else if (action.payload.category === "Processor") {
+        state.pcBuild.processor = action.payload;
+      } else if (action.payload.category === "PowerSupply") {
+        state.pcBuild.powerSupply = action.payload;
+      } else if (action.payload.category === "StorageDevice") {
+        state.pcBuild.storageDevice = action.payload;
+      }
       // state.monitor.push({ ...action.payload });
     },
   },
 });
 
-export const { addMonitor } = pcBuilderSlice.actions;
+export const { addMonitor, addRam } = pcBuilderSlice.actions;
 
 export default pcBuilderSlice.reducer;

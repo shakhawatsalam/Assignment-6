@@ -6,10 +6,12 @@ import { useSelector } from "react-redux";
 
 const pcBuilderPage = () => {
   const router = useRouter();
-  const { monitor } = useSelector((state) => state.pcBuilder);
+  const { monitor, ram, motherBoard, processor, powerSupply, storageDevice } =
+    useSelector((state) => state.pcBuilder.pcBuild);
   console.log(monitor);
   return (
-    <div className='overflow-x-auto'>
+    <div className='overflow-x-auto h-[70vh]'>
+      <h1 className='text-center text-3xl'>Build Your Dream Pc</h1>
       <table className='table'>
         {/* head */}
         <thead>
@@ -21,7 +23,7 @@ const pcBuilderPage = () => {
           </tr>
         </thead>
         <tbody>
-          {/* row 1 */}
+          {/* MONITOR */}
           <tr>
             <td>
               <div className='flex items-center space-x-3'>
@@ -51,21 +53,31 @@ const pcBuilderPage = () => {
                     <div className='font-bold'>Add Monitor</div>
                   )}
                   {monitor?.category ? (
-                    <div className='text-sm opacity-50'>{monitor.category}</div>
+                    <div className='text-sm opacity-50'>
+                      {monitor?.category}
+                    </div>
                   ) : (
                     <div className='text-sm opacity-50'>Add Monitor</div>
                   )}
                 </div>
               </div>
             </td>
-            <td>
-              Zemlak, Daniel and Leannon
-              <br />
-              <span className='badge badge-ghost badge-sm'>
-                Desktop Support Technician
-              </span>
-            </td>
-            <td>Purple</td>
+            {monitor?.keyFeatures?.brand && monitor?.averageRating ? (
+              <td>
+                {monitor?.keyFeatures?.brand}
+                <br />
+                <span className='badge badge-ghost badge-sm'>
+                  {monitor?.averageRating}
+                </span>
+              </td>
+            ) : (
+              <td>
+                Add Monitor
+                <br />
+                <span className='badge badge-ghost badge-sm'>Add Monitor</span>
+              </td>
+            )}
+            {monitor?.price ? <td>{monitor?.price}</td> : <td>Add monitor</td>}
             <th>
               <Link
                 href={`/addproduct/${"Monitor"}`}
@@ -74,97 +86,341 @@ const pcBuilderPage = () => {
               </Link>
             </th>
           </tr>
-          {/* row 2 */}
+          {/* RAM */}
           <tr>
             <td>
               <div className='flex items-center space-x-3'>
                 <div className='avatar'>
                   <div className='mask mask-squircle w-12 h-12'>
-                    <img
-                      src='/tailwind-css-component-profile-3@56w.png'
-                      alt='Avatar Tailwind CSS Component'
-                    />
+                    {ram?.image ? (
+                      <Image
+                        src={ram.image}
+                        alt='Avatar Tailwind CSS Component'
+                        width={300}
+                        height={300}
+                      />
+                    ) : (
+                      <Image
+                        src='/tailwind-css-component-profile-2@56w.png'
+                        alt='Avatar Tailwind CSS Component'
+                        width={300}
+                        height={300}
+                      />
+                    )}
                   </div>
                 </div>
                 <div>
-                  <div className='font-bold'>Brice Swyre</div>
-                  <div className='text-sm opacity-50'>China</div>
+                  {ram?.productName ? (
+                    <div className='font-bold'>{ram?.productName}</div>
+                  ) : (
+                    <div className='font-bold'>Add Monitor</div>
+                  )}
+                  {ram?.category ? (
+                    <div className='text-sm opacity-50'>{ram?.category}</div>
+                  ) : (
+                    <div className='text-sm opacity-50'>Add Monitor</div>
+                  )}
                 </div>
               </div>
             </td>
-            <td>
-              Carroll Group
-              <br />
-              <span className='badge badge-ghost badge-sm'>Tax Accountant</span>
-            </td>
-            <td>Red</td>
+            {ram?.keyFeatures?.brand && ram?.averageRating ? (
+              <td>
+                {ram?.keyFeatures?.brand}
+                <br />
+                <span className='badge badge-ghost badge-sm'>
+                  {ram?.averageRating}
+                </span>
+              </td>
+            ) : (
+              <td>
+                Add Monitor
+                <br />
+                <span className='badge badge-ghost badge-sm'>Add Monitor</span>
+              </td>
+            )}
+            {ram?.price ? <td>{ram?.price}</td> : <td>Add monitor</td>}
             <th>
-              <button className='btn btn-ghost btn-xs'>details</button>
+              <Link
+                href={`/addproduct/${"RAM"}`}
+                className='btn btn-primary btn-xs'>
+                add
+              </Link>
             </th>
           </tr>
-          {/* row 3 */}
+          {/* MOTHER BOARD */}
           <tr>
             <td>
               <div className='flex items-center space-x-3'>
                 <div className='avatar'>
                   <div className='mask mask-squircle w-12 h-12'>
-                    <img
-                      src='/tailwind-css-component-profile-4@56w.png'
-                      alt='Avatar Tailwind CSS Component'
-                    />
+                    {motherBoard?.image ? (
+                      <Image
+                        src={motherBoard?.image}
+                        alt='Avatar Tailwind CSS Component'
+                        width={300}
+                        height={300}
+                      />
+                    ) : (
+                      <Image
+                        src='/tailwind-css-component-profile-2@56w.png'
+                        alt='Avatar Tailwind CSS Component'
+                        width={300}
+                        height={300}
+                      />
+                    )}
                   </div>
                 </div>
                 <div>
-                  <div className='font-bold'>Marjy Ferencz</div>
-                  <div className='text-sm opacity-50'>Russia</div>
+                  {motherBoard?.productName ? (
+                    <div className='font-bold'>{motherBoard?.productName}</div>
+                  ) : (
+                    <div className='font-bold'>Add Monitor</div>
+                  )}
+                  {motherBoard?.category ? (
+                    <div className='text-sm opacity-50'>
+                      {motherBoard?.category}
+                    </div>
+                  ) : (
+                    <div className='text-sm opacity-50'>Add Monitor</div>
+                  )}
                 </div>
               </div>
             </td>
-            <td>
-              Rowe-Schoen
-              <br />
-              <span className='badge badge-ghost badge-sm'>
-                Office Assistant I
-              </span>
-            </td>
-            <td>Crimson</td>
+            {motherBoard?.keyFeatures?.brand && motherBoard?.averageRating ? (
+              <td>
+                {motherBoard?.keyFeatures?.brand}
+                <br />
+                <span className='badge badge-ghost badge-sm'>
+                  {motherBoard?.averageRating}
+                </span>
+              </td>
+            ) : (
+              <td>
+                Add Monitor
+                <br />
+                <span className='badge badge-ghost badge-sm'>Add Monitor</span>
+              </td>
+            )}
+            {motherBoard?.price ? (
+              <td>{motherBoard?.price}</td>
+            ) : (
+              <td>Add monitor</td>
+            )}
             <th>
-              <button className='btn btn-ghost btn-xs'>details</button>
+              <Link
+                href={`/addproduct/${"Motherboard"}`}
+                className='btn btn-primary btn-xs'>
+                add
+              </Link>
             </th>
           </tr>
-          {/* row 4 */}
+          {/* PROCESSOR */}
           <tr>
             <td>
               <div className='flex items-center space-x-3'>
                 <div className='avatar'>
                   <div className='mask mask-squircle w-12 h-12'>
-                    <img
-                      src='/tailwind-css-component-profile-5@56w.png'
-                      alt='Avatar Tailwind CSS Component'
-                    />
+                    {processor?.image ? (
+                      <Image
+                        src={processor.image}
+                        alt='Avatar Tailwind CSS Component'
+                        width={300}
+                        height={300}
+                      />
+                    ) : (
+                      <Image
+                        src='/tailwind-css-component-profile-2@56w.png'
+                        alt='Avatar Tailwind CSS Component'
+                        width={300}
+                        height={300}
+                      />
+                    )}
                   </div>
                 </div>
                 <div>
-                  <div className='font-bold'>Yancy Tear</div>
-                  <div className='text-sm opacity-50'>Brazil</div>
+                  {processor?.productName ? (
+                    <div className='font-bold'>{processor?.productName}</div>
+                  ) : (
+                    <div className='font-bold'>Add Monitor</div>
+                  )}
+                  {processor?.category ? (
+                    <div className='text-sm opacity-50'>
+                      {processor?.category}
+                    </div>
+                  ) : (
+                    <div className='text-sm opacity-50'>Add Monitor</div>
+                  )}
                 </div>
               </div>
             </td>
-            <td>
-              Wyman-Ledner
-              <br />
-              <span className='badge badge-ghost badge-sm'>
-                Community Outreach Specialist
-              </span>
-            </td>
-            <td>Indigo</td>
+            {processor?.keyFeatures?.brand && processor?.averageRating ? (
+              <td>
+                {processor?.keyFeatures?.brand}
+                <br />
+                <span className='badge badge-ghost badge-sm'>
+                  {processor?.averageRating}
+                </span>
+              </td>
+            ) : (
+              <td>
+                Add Monitor
+                <br />
+                <span className='badge badge-ghost badge-sm'>Add Monitor</span>
+              </td>
+            )}
+            {processor?.price ? (
+              <td>{processor?.price}</td>
+            ) : (
+              <td>Add monitor</td>
+            )}
             <th>
-              <button className='btn btn-ghost btn-xs'>details</button>
+              <Link
+                href={`/addproduct/${"Processor"}`}
+                className='btn btn-primary btn-xs'>
+                add
+              </Link>
+            </th>
+          </tr>
+          {/* STORAGE */}
+          <tr>
+            <td>
+              <div className='flex items-center space-x-3'>
+                <div className='avatar'>
+                  <div className='mask mask-squircle w-12 h-12'>
+                    {storageDevice?.image ? (
+                      <Image
+                        src={storageDevice?.image}
+                        alt='Avatar Tailwind CSS Component'
+                        width={300}
+                        height={300}
+                      />
+                    ) : (
+                      <Image
+                        src='/tailwind-css-component-profile-2@56w.png'
+                        alt='Avatar Tailwind CSS Component'
+                        width={300}
+                        height={300}
+                      />
+                    )}
+                  </div>
+                </div>
+                <div>
+                  {storageDevice?.productName ? (
+                    <div className='font-bold'>
+                      {storageDevice?.productName}
+                    </div>
+                  ) : (
+                    <div className='font-bold'>Add Monitor</div>
+                  )}
+                  {storageDevice?.category ? (
+                    <div className='text-sm opacity-50'>
+                      {storageDevice?.category}
+                    </div>
+                  ) : (
+                    <div className='text-sm opacity-50'>Add Monitor</div>
+                  )}
+                </div>
+              </div>
+            </td>
+            {storageDevice?.keyFeatures?.brand &&
+            storageDevice?.averageRating ? (
+              <td>
+                {storageDevice?.keyFeatures?.brand}
+                <br />
+                <span className='badge badge-ghost badge-sm'>
+                  {storageDevice?.averageRating}
+                </span>
+              </td>
+            ) : (
+              <td>
+                Add Monitor
+                <br />
+                <span className='badge badge-ghost badge-sm'>Add Monitor</span>
+              </td>
+            )}
+            {storageDevice?.price ? (
+              <td>{storageDevice?.price}</td>
+            ) : (
+              <td>Add monitor</td>
+            )}
+            <th>
+              <Link
+                href={`/addproduct/${"StorageDevice"}`}
+                className='btn btn-primary btn-xs'>
+                add
+              </Link>
+            </th>
+          </tr>
+          {/* POWER SUPPLY */}
+          <tr>
+            <td>
+              <div className='flex items-center space-x-3'>
+                <div className='avatar'>
+                  <div className='mask mask-squircle w-12 h-12'>
+                    {powerSupply?.image ? (
+                      <Image
+                        src={powerSupply.image}
+                        alt='Avatar Tailwind CSS Component'
+                        width={300}
+                        height={300}
+                      />
+                    ) : (
+                      <Image
+                        src='/tailwind-css-component-profile-2@56w.png'
+                        alt='Avatar Tailwind CSS Component'
+                        width={300}
+                        height={300}
+                      />
+                    )}
+                  </div>
+                </div>
+                <div>
+                  {powerSupply?.productName ? (
+                    <div className='font-bold'>{powerSupply?.productName}</div>
+                  ) : (
+                    <div className='font-bold'>Add Monitor</div>
+                  )}
+                  {powerSupply?.category ? (
+                    <div className='text-sm opacity-50'>
+                      {powerSupply?.category}
+                    </div>
+                  ) : (
+                    <div className='text-sm opacity-50'>Add Monitor</div>
+                  )}
+                </div>
+              </div>
+            </td>
+            {powerSupply?.keyFeatures?.brand && powerSupply?.averageRating ? (
+              <td>
+                {powerSupply?.keyFeatures?.brand}
+                <br />
+                <span className='badge badge-ghost badge-sm'>
+                  {powerSupply?.averageRating}
+                </span>
+              </td>
+            ) : (
+              <td>
+                Add Monitor
+                <br />
+                <span className='badge badge-ghost badge-sm'>Add Monitor</span>
+              </td>
+            )}
+            {powerSupply?.price ? (
+              <td>{powerSupply?.price}</td>
+            ) : (
+              <td>Add monitor</td>
+            )}
+            <th>
+              <Link
+                href={`/addproduct/${"PowerSupply"}`}
+                className='btn btn-primary btn-xs'>
+                add
+              </Link>
             </th>
           </tr>
         </tbody>
         {/* foot */}
-        <tfoot>
+        {/* <tfoot>
           <tr>
             <th></th>
             <th>Name</th>
@@ -172,7 +428,7 @@ const pcBuilderPage = () => {
             <th>Favorite Color</th>
             <th></th>
           </tr>
-        </tfoot>
+        </tfoot> */}
       </table>
     </div>
   );
