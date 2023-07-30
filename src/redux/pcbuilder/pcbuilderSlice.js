@@ -9,6 +9,7 @@ const initialState = {
     powerSupply: null,
     storageDevice: null,
   },
+  buildPc: false,
 };
 
 const pcBuilderSlice = createSlice({
@@ -29,6 +30,20 @@ const pcBuilderSlice = createSlice({
       } else if (action.payload.category === "StorageDevice") {
         state.pcBuild.storageDevice = action.payload;
       }
+
+      if (
+        state.pcBuild.monitor &&
+        state.pcBuild.ram &&
+        state.pcBuild.motherBoard &&
+        state.pcBuild.processor &&
+        state.pcBuild.powerSupply &&
+        state.pcBuild.storageDevice
+      ) {
+        state.buildPc = true;
+      } else {
+        state.buildPc = false;
+      }
+
       // state.monitor.push({ ...action.payload });
     },
   },

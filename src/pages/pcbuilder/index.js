@@ -8,7 +8,8 @@ const pcBuilderPage = () => {
   const router = useRouter();
   const { monitor, ram, motherBoard, processor, powerSupply, storageDevice } =
     useSelector((state) => state.pcBuilder.pcBuild);
-  console.log(monitor);
+  const { buildPc } = useSelector((state) => state.pcBuilder);
+  console.log(buildPc);
   return (
     <div className='overflow-x-auto h-[70vh]'>
       <h1 className='text-center text-3xl'>Build Your Dream Pc</h1>
@@ -430,6 +431,15 @@ const pcBuilderPage = () => {
           </tr>
         </tfoot> */}
       </table>
+      <div className='flex justify-center mt-7'>
+        {buildPc ? (
+          <button className='btn btn-primary'>Build</button>
+        ) : (
+          <button className='btn btn-primary ' disabled='disabled'>
+            Build
+          </button>
+        )}
+      </div>
     </div>
   );
 };

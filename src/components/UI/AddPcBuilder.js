@@ -1,9 +1,11 @@
 import { addMonitor } from "@/redux/pcbuilder/pcbuilderSlice";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import { useDispatch } from "react-redux";
 
 const AddPcBuilder = ({ product }) => {
+  const router = useRouter();
   const dispatch = useDispatch();
   return (
     <div>
@@ -24,7 +26,10 @@ const AddPcBuilder = ({ product }) => {
               Details
             </Link>
             <button
-              onClick={() => dispatch(addMonitor(product))}
+              onClick={() => {
+                dispatch(addMonitor(product));
+                router.push("/pcbuilder");
+              }}
               className='btn btn-primary'>
               Add
             </button>
