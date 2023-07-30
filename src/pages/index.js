@@ -10,7 +10,7 @@ export default function Home({ allProducts }) {
   return (
     <>
       <Banner />
-      <ProductCart  allProducts={allProducts} />
+      <ProductCart allProducts={allProducts} />
     </>
   );
 }

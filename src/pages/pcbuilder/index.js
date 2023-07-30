@@ -2,6 +2,7 @@ import RootLayout from "@/components/Layout/RootLayout";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
+
 import { useSelector } from "react-redux";
 
 const pcBuilderPage = () => {
@@ -114,12 +115,12 @@ const pcBuilderPage = () => {
                   {ram?.productName ? (
                     <div className='font-bold'>{ram?.productName}</div>
                   ) : (
-                    <div className='font-bold'>Add Monitor</div>
+                    <div className='font-bold'>Add Ram</div>
                   )}
                   {ram?.category ? (
                     <div className='text-sm opacity-50'>{ram?.category}</div>
                   ) : (
-                    <div className='text-sm opacity-50'>Add Monitor</div>
+                    <div className='text-sm opacity-50'>Add Ram</div>
                   )}
                 </div>
               </div>
@@ -134,12 +135,12 @@ const pcBuilderPage = () => {
               </td>
             ) : (
               <td>
-                Add Monitor
+                Add Ram
                 <br />
-                <span className='badge badge-ghost badge-sm'>Add Monitor</span>
+                <span className='badge badge-ghost badge-sm'>Add Ram</span>
               </td>
             )}
-            {ram?.price ? <td>{ram?.price}</td> : <td>Add monitor</td>}
+            {ram?.price ? <td>{ram?.price}</td> : <td>Add Ram</td>}
             <th>
               <Link
                 href={`/addproduct/${"RAM"}`}
@@ -175,14 +176,14 @@ const pcBuilderPage = () => {
                   {motherBoard?.productName ? (
                     <div className='font-bold'>{motherBoard?.productName}</div>
                   ) : (
-                    <div className='font-bold'>Add Monitor</div>
+                    <div className='font-bold'>Add Motherboard</div>
                   )}
                   {motherBoard?.category ? (
                     <div className='text-sm opacity-50'>
                       {motherBoard?.category}
                     </div>
                   ) : (
-                    <div className='text-sm opacity-50'>Add Monitor</div>
+                    <div className='text-sm opacity-50'>Add Motherboard</div>
                   )}
                 </div>
               </div>
@@ -197,15 +198,17 @@ const pcBuilderPage = () => {
               </td>
             ) : (
               <td>
-                Add Monitor
+                Add Motherboard
                 <br />
-                <span className='badge badge-ghost badge-sm'>Add Monitor</span>
+                <span className='badge badge-ghost badge-sm'>
+                  Add Motherboard
+                </span>
               </td>
             )}
             {motherBoard?.price ? (
               <td>{motherBoard?.price}</td>
             ) : (
-              <td>Add monitor</td>
+              <td>Add Motherboard</td>
             )}
             <th>
               <Link
@@ -242,14 +245,14 @@ const pcBuilderPage = () => {
                   {processor?.productName ? (
                     <div className='font-bold'>{processor?.productName}</div>
                   ) : (
-                    <div className='font-bold'>Add Monitor</div>
+                    <div className='font-bold'>Add Processor</div>
                   )}
                   {processor?.category ? (
                     <div className='text-sm opacity-50'>
                       {processor?.category}
                     </div>
                   ) : (
-                    <div className='text-sm opacity-50'>Add Monitor</div>
+                    <div className='text-sm opacity-50'>Add Processor</div>
                   )}
                 </div>
               </div>
@@ -264,15 +267,17 @@ const pcBuilderPage = () => {
               </td>
             ) : (
               <td>
-                Add Monitor
+                Add Processor
                 <br />
-                <span className='badge badge-ghost badge-sm'>Add Monitor</span>
+                <span className='badge badge-ghost badge-sm'>
+                  Add Processor
+                </span>
               </td>
             )}
             {processor?.price ? (
               <td>{processor?.price}</td>
             ) : (
-              <td>Add monitor</td>
+              <td>Add Processor</td>
             )}
             <th>
               <Link
@@ -311,14 +316,14 @@ const pcBuilderPage = () => {
                       {storageDevice?.productName}
                     </div>
                   ) : (
-                    <div className='font-bold'>Add Monitor</div>
+                    <div className='font-bold'>Add Storage</div>
                   )}
                   {storageDevice?.category ? (
                     <div className='text-sm opacity-50'>
                       {storageDevice?.category}
                     </div>
                   ) : (
-                    <div className='text-sm opacity-50'>Add Monitor</div>
+                    <div className='text-sm opacity-50'>Add Storage</div>
                   )}
                 </div>
               </div>
@@ -334,15 +339,15 @@ const pcBuilderPage = () => {
               </td>
             ) : (
               <td>
-                Add Monitor
+                Add Storage
                 <br />
-                <span className='badge badge-ghost badge-sm'>Add Monitor</span>
+                <span className='badge badge-ghost badge-sm'>Add Storage</span>
               </td>
             )}
             {storageDevice?.price ? (
               <td>{storageDevice?.price}</td>
             ) : (
-              <td>Add monitor</td>
+              <td>Add Storage</td>
             )}
             <th>
               <Link
@@ -379,14 +384,14 @@ const pcBuilderPage = () => {
                   {powerSupply?.productName ? (
                     <div className='font-bold'>{powerSupply?.productName}</div>
                   ) : (
-                    <div className='font-bold'>Add Monitor</div>
+                    <div className='font-bold'>Add Power Supply</div>
                   )}
                   {powerSupply?.category ? (
                     <div className='text-sm opacity-50'>
                       {powerSupply?.category}
                     </div>
                   ) : (
-                    <div className='text-sm opacity-50'>Add Monitor</div>
+                    <div className='text-sm opacity-50'>Add Power Supply</div>
                   )}
                 </div>
               </div>
@@ -401,15 +406,17 @@ const pcBuilderPage = () => {
               </td>
             ) : (
               <td>
-                Add Monitor
+                Add Power Supply
                 <br />
-                <span className='badge badge-ghost badge-sm'>Add Monitor</span>
+                <span className='badge badge-ghost badge-sm'>
+                  Add Power Supply
+                </span>
               </td>
             )}
             {powerSupply?.price ? (
               <td>{powerSupply?.price}</td>
             ) : (
-              <td>Add monitor</td>
+              <td>Add Power Supply</td>
             )}
             <th>
               <Link
