@@ -5,6 +5,8 @@ import React from "react";
 
 const featuredProduct = ({ product }) => {
   const router = useRouter();
+  // const { previous } = router.query;
+  // console.log(previous);
   return (
     <>
       <h1 className='text-center text-6xl'>{router.query.featured}</h1>

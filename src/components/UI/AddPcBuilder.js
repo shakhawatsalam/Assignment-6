@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-const Singleproduct = ({ product }) => {
+const AddPcBuilder = () => {
   return (
     <div>
       <div className='card w-96 glass'>
@@ -27,4 +27,4 @@ const Singleproduct = ({ product }) => {
   );
 };
 
-export default Singleproduct;
+export default AddPcBuilder;
