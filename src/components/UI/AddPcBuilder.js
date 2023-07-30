@@ -1,7 +1,10 @@
+import { addMonitor } from "@/redux/pcbuilder/pcbuilderSlice";
 import Image from "next/image";
 import Link from "next/link";
+import { useDispatch } from "react-redux";
 
-const AddPcBuilder = () => {
+const AddPcBuilder = ({ product }) => {
+  const dispatch = useDispatch();
   return (
     <div>
       <div className='card w-96 glass'>
@@ -14,12 +17,17 @@ const AddPcBuilder = () => {
           <h3 className='font-bold'>Price: {product.price}</h3>
           <h3 className='font-bold'>Status: {product.status}</h3>
           <h3 className='font-bold'>Rating: {product.averageRating}</h3>
-          <div className='card-actions justify-end'>
+          <div className='card-actions justify-between mt-5'>
             <Link
               href={`/productdetails/${product._id}`}
               className='btn btn-primary'>
               Details
             </Link>
+            <button
+              onClick={() => dispatch(addMonitor(product))}
+              className='btn btn-primary'>
+              Add
+            </button>
           </div>
         </div>
       </div>

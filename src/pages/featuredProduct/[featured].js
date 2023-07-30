@@ -5,8 +5,6 @@ import React from "react";
 
 const featuredProduct = ({ product }) => {
   const router = useRouter();
-  // const { previous } = router.query;
-  // console.log(previous);
   return (
     <>
       <h1 className='text-center text-6xl'>{router.query.featured}</h1>
@@ -22,11 +20,10 @@ const featuredProduct = ({ product }) => {
   );
 };
 
+export default featuredProduct;
 featuredProduct.getLayout = function (page) {
   return <RootLayout>{page}</RootLayout>;
 };
-
-export default featuredProduct;
 
 export const getStaticPaths = async () => {
   const res = await fetch(`http://localhost:5000/components/`);

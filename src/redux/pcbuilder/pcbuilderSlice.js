@@ -10,7 +10,12 @@ const pcBuilderSlice = createSlice({
   initialState,
   reducers: {
     addMonitor: (state, action) => {
-      state.monitor = action.monitor;
+      state.monitor = action.payload;
+      // state.monitor.push({ ...action.payload });
     },
   },
 });
+
+export const { addMonitor } = pcBuilderSlice.actions;
+
+export default pcBuilderSlice.reducer;

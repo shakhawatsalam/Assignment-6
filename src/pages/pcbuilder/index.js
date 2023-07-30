@@ -1,18 +1,22 @@
 import RootLayout from "@/components/Layout/RootLayout";
+import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import { useSelector } from "react-redux";
 
 const pcBuilderPage = () => {
   const router = useRouter();
+  const { monitor } = useSelector((state) => state.pcBuilder);
+  console.log(monitor);
   return (
     <div className='overflow-x-auto'>
       <table className='table'>
         {/* head */}
         <thead>
           <tr>
-            <th>Name</th>
-            <th>Job</th>
-            <th>Favorite Color</th>
+            <th>Component</th>
+            <th>Specification</th>
+            <th>Price</th>
             <th></th>
           </tr>
         </thead>
@@ -23,15 +27,34 @@ const pcBuilderPage = () => {
               <div className='flex items-center space-x-3'>
                 <div className='avatar'>
                   <div className='mask mask-squircle w-12 h-12'>
-                    <img
-                      src='/tailwind-css-component-profile-2@56w.png'
-                      alt='Avatar Tailwind CSS Component'
-                    />
+                    {monitor?.image ? (
+                      <Image
+                        src={monitor.image}
+                        alt='Avatar Tailwind CSS Component'
+                        width={300}
+                        height={300}
+                      />
+                    ) : (
+                      <Image
+                        src='/tailwind-css-component-profile-2@56w.png'
+                        alt='Avatar Tailwind CSS Component'
+                        width={300}
+                        height={300}
+                      />
+                    )}
                   </div>
                 </div>
                 <div>
-                  <div className='font-bold'>Monitor</div>
-                  <div className='text-sm opacity-50'>United States</div>
+                  {monitor?.productName ? (
+                    <div className='font-bold'>{monitor?.productName}</div>
+                  ) : (
+                    <div className='font-bold'>Add Monitor</div>
+                  )}
+                  {monitor?.category ? (
+                    <div className='text-sm opacity-50'>{monitor.category}</div>
+                  ) : (
+                    <div className='text-sm opacity-50'>Add Monitor</div>
+                  )}
                 </div>
               </div>
             </td>
@@ -45,7 +68,7 @@ const pcBuilderPage = () => {
             <td>Purple</td>
             <th>
               <Link
-                href={`/featuredProduct/${"Monitor"}`}
+                href={`/addproduct/${"Monitor"}`}
                 className='btn btn-primary btn-xs'>
                 add
               </Link>
