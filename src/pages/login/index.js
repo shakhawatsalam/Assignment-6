@@ -8,7 +8,8 @@ const logIn = () => {
       <button
         onClick={() =>
           signIn("google", {
-            callbackUrl: "http://localhost:3000",
+            callbackUrl:
+              "https://pc-builder-website-shakhawatsalam.vercel.app/",
           })
         }
         className='btn btn-wide'>
