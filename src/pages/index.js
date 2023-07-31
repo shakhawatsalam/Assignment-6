@@ -20,6 +20,7 @@ Home.getLayout = function (page) {
 };
 
 export const getStaticProps = async () => {
+
   const res = await fetch(`${process.env.BASE_URL}/components`);
   const data = await res.json();
 
