@@ -3,7 +3,7 @@ import AddPcBuilder from "@/components/UI/AddPcBuilder";
 import { useRouter } from "next/router";
 
 const addProduct = ({ product }) => {
-    const router = useRouter();   
+  const router = useRouter();
   return (
     <>
       <h1 className='text-center text-6xl'>{router.query.addproduct}</h1>
@@ -25,7 +25,20 @@ addProduct.getLayout = function (page) {
   return <RootLayout>{page}</RootLayout>;
 };
 
-export const getServerSideProps = async (context) => {
+export const getStaticPaths = async () => {
+  const res = await fetch(`${process.env.BASE_URL}/components`);
+  const products = await res.json();
+  const paths = products?.data?.map((product) => ({
+    params: {
+      addproduct: product.category,
+      id: product.id,
+    },
+  }));
+
+  return { paths, fallback: false }; // * true and Blocking
+};
+
+export const getStaticProps = async (context) => {
   const { params } = context;
   const res = await fetch(
     `${process.env.BASE_URL}/components/featured/${params.addproduct}`

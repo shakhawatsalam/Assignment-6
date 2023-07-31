@@ -76,8 +76,9 @@ export const getStaticProps = async (context) => {
   //   };
   // }
   const { params } = context;
+  console.log(params.productId)
   const res = await fetch(
-    `${process.env.BASE_URL}/components/${params?.productId}`
+    `${process.env.BASE_URL}/components/${params.productId}`
   );
   const data = await res.json();
   return {
