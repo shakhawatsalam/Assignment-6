@@ -5,16 +5,15 @@ import React from "react";
 const logIn = () => {
   return (
     <div className='flex justify-center items-center h-[70vh] flex-col'>
-      {/* <button
+      <button
         onClick={() =>
           signIn("google", {
-            callbackUrl:
-              "https://pc-builder-website-shakhawatsalam.vercel.app",
+            callbackUrl: "http://localhost:3000",
           })
         }
         className='btn btn-wide'>
         Sign In With Google
-      </button> */}
+      </button>
 
       <button
         onClick={() =>
